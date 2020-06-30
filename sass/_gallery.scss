@@ -20,7 +20,7 @@
     }
     &--3 {
       grid-row: 1 / span 2;
-      grid-column: 6 / span 1;
+      grid-column: 6 / 7;
     }
     &--4 {
       grid-row: 1 / span 2;
@@ -35,7 +35,7 @@
       grid-column: 3 / span 2;
     }
     &--7 {
-      grid-row: 4 / span 1;
+      grid-row: 4 / 5;
       grid-column: 5 / span 1;
     }
     &--8 {
@@ -44,11 +44,11 @@
     }
     &--9 {
       grid-row: 3 / span 3;
-      grid-column: 8 / span 1;
+      grid-column: 8 / -1;
     }
     &--10 {
       grid-row: 6 / span 2;
-      grid-column: 1 / span 1;
+      grid-column: 1 / 2;
     }
     &--11 {
       grid-row: 6 / span 2;
@@ -56,7 +56,7 @@
     }
     &--12 {
       grid-row: 6 / span 2;
-      grid-column: 4 / span 1;
+      grid-column: 4 / 5;
     }
     &--13 {
       grid-row: 5 / span 3;
@@ -64,7 +64,7 @@
     }
     &--14 {
       grid-row: 6 / span 2;
-      grid-column: 8 / span 1;
+      grid-column: 8 / -1;
     }
   }
 
