@@ -14,6 +14,11 @@ $color-grey-dark-2: #6D5D4B;
 $font-primary: 'Nunito', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
 
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em; // to compute em (want to add at 1200px first bp) 1200 / 16 = 75
+$bp-large: 62.5em; // 1000px
+
+
 *,
 *::before,
 *::after {
@@ -25,6 +30,10 @@ $font-display: 'Josefin Sans', sans-serif;
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 10px / 16px = 62.5% -> 1rem = 10px
+  // for responsiveness 1rem = 8px
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -39,4 +48,11 @@ body {
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   // 8rem for sidebar -- to center (because of the sidebar): minmax(6rem,1fr) left and minmax(6rem,1fr) right besides our main grid template (otherwise we could work with margin 0 auto) -- 8 columns min width content and max with 140px - 1120 px totally
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem,1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem,1fr) [full-end];
+
+  // remove first column for the navbar and put it on top
+  @media only screen and (max-width: $bp-large) {
+    grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+    grid-template-columns: [full-start] minmax(6rem,1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem,1fr) [full-end];
+
+  }
 }

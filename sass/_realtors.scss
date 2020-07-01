@@ -24,8 +24,9 @@
     display: block;
   }
 
-  &__sold {
+  &__sold {
     text-transform: uppercase;
+    font-size: 1.2rem;
     color: $color-grey-light-2;
     margin-top: -3px;
   }

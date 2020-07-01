@@ -9,9 +9,9 @@
   padding-top: 4rem;
 
   display: grid;
-  grid-template-rows: 1fr min-content 6rem 1fr;
+  grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
   // make the width of the grid only how much space the content need
-  grid-template-columns: max-content;
+  grid-template-columns: minmax(min-content, max-content);
   grid-row-gap: 1.5rem;
   // center entire grid
   justify-content: center;
@@ -49,8 +49,11 @@
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 3rem;
     justify-items: center;
+    align-items: center;
     img {
-      height: 2.5rem;
+      // responsiveness
+      max-height: 2.5rem;
+      max-width: 100%;
       filter: brightness(70%);
     }
   }
